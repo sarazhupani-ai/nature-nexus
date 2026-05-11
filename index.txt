@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="sq" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nature Nexus</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&amp;family=Outfit:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+  <style>
+    .font-display { font-family: 'Cormorant Garamond', serif; }
+    .font-body { font-family: 'Outfit', sans-serif; }
+    .hero-bg {
+      background: linear-gradient(135deg, #1a3a2a 0%, #0d2818 40%, #1a4a35 100%);
+    }
+    .card-hover { transition: transform 0.4s ease, box-shadow 0.4s ease; }
+    .card-hover:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+    .fade-in { animation: fadeIn 0.8s ease forwards; opacity: 0; }
+    .fade-in-delay-1 { animation-delay: 0.2s; }
+    .fade-in-delay-2 { animation-delay: 0.4s; }
+    .fade-in-delay-3 { animation-delay: 0.6s; }
+    @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } from { transform: translateY(20px); } }
+    .leaf-pattern {
+      background-image: radial-gradient(ellipse at 20% 50%, rgba(34,197,94,0.05) 0%, transparent 50%),
+                        radial-gradient(ellipse at 80% 20%, rgba(34,197,94,0.03) 0%, transparent 40%);
+    }
+  </style>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full font-body" style="background-color: #f7f5f0;">
+  <div id="app" class="w-full h-full overflow-auto"><!-- Navigation -->
+   <nav class="fixed top-0 w-full z-50 backdrop-blur-md" style="background: rgba(13,40,24,0.92);">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+     <div class="flex items-center gap-2"><i data-lucide="leaf" style="color: #6abf7b; width:24px; height:24px;"></i> <span class="font-display text-xl font-bold" style="color: #e8e4dc;">Nature Nexus</span>
+     </div>
+     <div class="hidden md:flex gap-8 text-sm font-medium" style="color: #b8c4bc;"><a href="#about" class="hover:text-white transition">Përmbajtja</a> <a href="#efforts" class="hover:text-white transition">Mundi ynë</a> <a href="#wildlife" class="hover:text-white transition">Jeta e egër</a> <a href="#action" class="hover:text-white transition">Merr aksion</a>
+     </div>
+    </div>
+   </nav><!-- Hero -->
+   <header class="hero-bg w-full pt-32 pb-24 px-6 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2220%22 cy=%2230%22 r=%2240%22 fill=%22none%22 stroke=%22%236abf7b%22 stroke-width=%220.3%22/><circle cx=%2280%22 cy=%2270%22 r=%2230%22 fill=%22none%22 stroke=%22%236abf7b%22 stroke-width=%220.2%22/></svg>'); background-size: 300px;"></div>
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+     <h1 id="hero-title" class="font-display text-5xl md:text-7xl font-bold mb-4 fade-in" style="color: #e8e4dc;">Nature Nexus</h1>
+     <p id="hero-subtitle" class="text-xl md:text-2xl font-light mb-8 fade-in fade-in-delay-1" style="color: #6abf7b;">Mbrojtja e Zemrës së Egër të Shqipërisë</p>
+     <p id="intro-text" class="text-base md:text-lg max-w-2xl mx-auto leading-relaxed fade-in fade-in-delay-2" style="color: #b8c4bc;">Shqipëria strehon disa nga zonat e fundit të egra të paprekura të Evropës - pyje të lashta, lumenj të pastra dhe biodiversitet të jashtëzakonshëm. Zbuloni përpjekjet për ruajtjen e këtij thesari ekologjik.</p>
+    </div>
+   </header><!-- Përmbajtja -->
+   <section id="about" class="leaf-pattern py-20 px-6">
+    <div class="max-w-5xl mx-auto">
+     <h2 class="font-display text-3xl md:text-4xl font-bold mb-6 text-center" style="color: #1a3a2a;">Pse Shqipëria ia vlen</h2>
+     <div class="grid md:grid-cols-3 gap-8 mt-12">
+      <div class="text-center fade-in fade-in-delay-1">
+       <div class="w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center" style="background: #1a3a2a;"><i data-lucide="mountain" style="color: #6abf7b; width:28px; height:28px;"></i>
+       </div>
+       <h3 class="font-display text-xl font-semibold mb-2" style="color: #1a3a2a;">15 Parqet kombëtare</h3>
+       <p class="text-sm leading-relaxed" style="color: #4a5e52;">Nga Alpet Shqiptare deri te ligatinat bregdetare, zonat e mbrojtura mbulojnë mbi 18% të territorit të vendit.</p>
+      </div>
+      <div class="text-center fade-in fade-in-delay-2">
+       <div class="w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center" style="background: #1a3a2a;"><i data-lucide="fish" style="color: #6abf7b; width:28px; height:28px;"></i>
+       </div>
+       <h3 class="font-display text-xl font-semibold mb-2" style="color: #1a3a2a;">3,200+ Specie</h3>
+       <p class="text-sm leading-relaxed" style="color: #4a5e52;">Shtëpi e arinjve të murrmë, rrëqebullit të Ballkanit, pelikanëve dalmatë dhe bimëve endemike që nuk gjenden askund tjetër në Tokë.</p>
+      </div>
+      <div class="text-center fade-in fade-in-delay-3">
+       <div class="w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center" style="background: #1a3a2a;"><i data-lucide="droplets" style="color: #6abf7b; width:28px; height:28px;"></i>
+       </div>
+       <h3 class="font-display text-xl font-semibold mb-2" style="color: #1a3a2a;">Lumenjtë e Fundit të Egër të Europës</h3>
+       <p class="text-sm leading-relaxed" style="color: #4a5e52;">Lumi Vjosa rrjedh plotësisht i egër — një nga lumenjtë e fundit të padëmtuar në Evropë, tani Park Kombëtar.</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Përpjekjet për Ruajtje -->
+   <section id="efforts" class="py-20 px-6" style="background: #1a3a2a;">
+    <div class="max-w-5xl mx-auto">
+     <h2 class="font-display text-3xl md:text-4xl font-bold mb-12 text-center" style="color: #e8e4dc;">Përpjekjet për Ruajtje</h2>
+     <div class="grid md:grid-cols-2 gap-6">
+      <div class="rounded-2xl p-6 card-hover" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(106,191,123,0.2);">
+       <div class="flex items-center gap-3 mb-4"><i data-lucide="shield" style="color: #6abf7b; width:22px; height:22px;"></i>
+        <h3 class="font-display text-xl font-semibold" style="color: #e8e4dc;">Parku Kombëtar i Lumit të Egër Vjosa</h3>
+       </div>
+       <p class="text-sm leading-relaxed" style="color: #b8c4bc;">Në vitin 2023, Shqipëria shpalli Vjosën dhe degët e saj Parkun e parë Kombëtar të Lumit të Egër në Evropë, duke mbrojtur 13,000 hektarë të ekosistemit lumor me rrjedhje të lirë.</p>
+      </div>
+      <div class="rounded-2xl p-6 card-hover" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(106,191,123,0.2);">
+       <div class="flex items-center gap-3 mb-4"><i data-lucide="eye" style="color: #6abf7b; width:22px; height:22px;"></i>
+        <h3 class="font-display text-xl font-semibold" style="color: #e8e4dc;">Rimëkëmbja e Rrëqebullit të Ballkanit</h3>
+       </div>
+       <p class="text-sm leading-relaxed" style="color: #b8c4bc;">Me më pak se 50 individë të mbetur, programet ndërkufitare midis Shqipërisë, Maqedonisë së Veriut dhe Kosovës punojnë për të shpëtuar rrëqebullin e Ballkanit, i cili është në rrezik kritikisht zhdukjeje.</p>
+      </div>
+      <div class="rounded-2xl p-6 card-hover" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(106,191,123,0.2);">
+       <div class="flex items-center gap-3 mb-4"><i data-lucide="trees" style="color: #6abf7b; width:22px; height:22px;"></i>
+        <h3 class="font-display text-xl font-semibold" style="color: #e8e4dc;">Iniciativat e Ripyllëzimit</h3>
+       </div>
+       <p class="text-sm leading-relaxed" style="color: #b8c4bc;">Programet e ripyllëzimit të udhëhequra nga komuniteti kanë mbjellë mbi 2 milionë pemë që nga viti 2015, duke restauruar shpatet e degraduara të kodrave dhe duke krijuar korridore për jetën e egër.</p>
+      </div>
+      <div class="rounded-2xl p-6 card-hover" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(106,191,123,0.2);">
+       <div class="flex items-center gap-3 mb-4"><i data-lucide="anchor" style="color: #6abf7b; width:22px; height:22px;"></i>
+        <h3 class="font-display text-xl font-semibold" style="color: #e8e4dc;">Zonat e Mbrojtura Detare</h3>
+       </div>
+       <p class="text-sm leading-relaxed" style="color: #b8c4bc;">Vijat bregdetare të Adriatikut dhe Jonit të Shqipërisë tani përfshijnë rezerva detare të zgjeruara që mbrojnë livadhet e barit detar me Posidonia dhe fokat mesdhetare të rrezikuara.</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Seksioni i kafshëve të egra -->
+   <section id="wildlife" class="py-20 px-6 leaf-pattern">
+    <div class="max-w-5xl mx-auto">
+     <h2 class="font-display text-3xl md:text-4xl font-bold mb-12 text-center" style="color: #1a3a2a;">Jeta e egër ikonike</h2>
+     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="rounded-xl p-5 text-center card-hover" style="background: white; border: 1px solid #d4ddd7;">
+       <div class="text-4xl mb-3">
+        🐻
+       </div>
+       <p class="font-medium text-sm" style="color: #1a3a2a;">Ariu i murrmë</p>
+       <p class="text-xs mt-1" style="color: #6b7c72;">~200 individë</p>
+      </div>
+      <div class="rounded-xl p-5 text-center card-hover" style="background: white; border: 1px solid #d4ddd7;">
+       <div class="text-4xl mb-3">
+        🐆
+       </div>
+       <p class="font-medium text-sm" style="color: #1a3a2a;">Rrëqebulli i Ballkanit</p>
+       <p class="text-xs mt-1" style="color: #6b7c72;">~40-50 individë</p>
+      </div>
+      <div class="rounded-xl p-5 text-center card-hover" style="background: white; border: 1px solid #d4ddd7;">
+       <div class="text-4xl mb-3">
+        🦅
+       </div>
+       <p class="font-medium text-sm" style="color: #1a3a2a;">Shqiponja e Artë</p>
+       <p class="text-xs mt-1" style="color: #6b7c72;">Simboli kombëtar</p>
+      </div>
+      <div class="rounded-xl p-5 text-center card-hover" style="background: white; border: 1px solid #d4ddd7;">
+       <div class="text-4xl mb-3">
+        🐬
+       </div>
+       <p class="font-medium text-sm" style="color: #1a3a2a;">Foka murg</p>
+       <p class="text-xs mt-1" style="color: #6b7c72;">E rrezikuar në mënyrë kritike</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Merr Aksion -->
+   <section id="action" class="py-20 px-6" style="background: #0d2818;">
+    <div class="max-w-3xl mx-auto text-center">
+     <h2 class="font-display text-3xl md:text-4xl font-bold mb-6" style="color: #e8e4dc;">Bëhu pjesë e ndryshimit</h2>
+     <p class="mb-10 leading-relaxed" style="color: #b8c4bc;">Çdo veprim ka rëndësi. Pavarësisht nëse përhapni ndërgjegjësimin, mbështesni organizatat lokale apo vizitoni në mënyrë të përgjegjshme — ju mund të ndihmoni në mbrojtjen e trashëgimisë natyrore të Shqipërisë për brezat që do të vijnë.</p>
+     <div class="flex flex-wrap justify-center gap-4"><a href="https://www.ppnea.org" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-full font-medium text-sm transition hover:scale-105" style="background: #6abf7b; color: #0d2818;"> <i data-lucide="external-link" style="width:16px; height:16px;"></i> Suporto PPNEA </a> <a href="https://www.euronatur.org" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-full font-medium text-sm transition hover:scale-105" style="background: transparent; color: #6abf7b; border: 1px solid #6abf7b;"> <i data-lucide="external-link" style="width:16px; height:16px;"></i> EuroNatur </a>
+     </div>
+    </div>
+   </section><!-- Footer -->
+   <footer class="py-8 px-6 text-center" style="background: #0a1f14; color: #6b7c72;">
+    <p class="text-sm">Nature Nexus — Iluminojmë historinë e konservimit të Shqipërisë.</p>
+   </footer>
+  </div>
+  <script>
+    const defaultConfig = {
+      hero_title: "Nature Nexus",
+      hero_subtitle: "Mbrojtja e Zemrës së Egër të Shqipërisë",
+      intro_text: "Shqipëria strehon disa nga zonat e fundit të egra të paprekura të Evropës - pyje të lashta, lumenj të pastra dhe biodiversitet të jashtëzakonshëm. Zbuloni përpjekjet për ruajtjen e këtij thesari ekologjik.
+      background_color: "#f7f5f0",
+      surface_color: "#ffffff",
+      text_color: "#1a3a2a",
+      primary_action_color: "#6abf7b",
+      secondary_action_color: "#0d2818"
+    };
+
+    function applyConfig(config) {
+      document.getElementById('hero-title').textContent = config.hero_title || defaultConfig.hero_title;
+      document.getElementById('hero-subtitle').textContent = config.hero_subtitle || defaultConfig.hero_subtitle;
+      document.getElementById('intro-text').textContent = config.intro_text || defaultConfig.intro_text;
+
+      const bg = config.background_color || defaultConfig.background_color;
+      const primary = config.primary_action_color || defaultConfig.primary_action_color;
+      const text = config.text_color || defaultConfig.text_color;
+      const dark = config.secondary_action_color || defaultConfig.secondary_action_color;
+      const surface = config.surface_color || defaultConfig.surface_color;
+
+      document.body.style.backgroundColor = bg;
+
+      const font = config.font_family;
+      if (font) {
+        const stack = `${font}, 'Outfit', sans-serif`;
+        document.body.style.fontFamily = stack;
+      }
+
+      const baseSize = config.font_size || 16;
+      document.getElementById('hero-title').style.fontSize = `${baseSize * 3.5}px`;
+      document.getElementById('hero-subtitle').style.fontSize = `${baseSize * 1.4}px`;
+      document.getElementById('intro-text').style.fontSize = `${baseSize}px`;
+    }
+
+    window.elementSdk.init({
+      defaultConfig,
+      onConfigChange: async (config) => { applyConfig(config); },
+      mapToCapabilities: (config) => ({
+        recolorables: [
+          { get: () => config.background_color || defaultConfig.background_color, set: (v) => { config.background_color = v; window.elementSdk.setConfig({ background_color: v }); } },
+          { get: () => config.surface_color || defaultConfig.surface_color, set: (v) => { config.surface_color = v; window.elementSdk.setConfig({ surface_color: v }); } },
+          { get: () => config.text_color || defaultConfig.text_color, set: (v) => { config.text_color = v; window.elementSdk.setConfig({ text_color: v }); } },
+          { get: () => config.primary_action_color || defaultConfig.primary_action_color, set: (v) => { config.primary_action_color = v; window.elementSdk.setConfig({ primary_action_color: v }); } },
+          { get: () => config.secondary_action_color || defaultConfig.secondary_action_color, set: (v) => { config.secondary_action_color = v; window.elementSdk.setConfig({ secondary_action_color: v }); } }
+        ],
+        borderables: [],
+        fontEditable: {
+          get: () => config.font_family || defaultConfig.font_family || 'Outfit',
+          set: (v) => { config.font_family = v; window.elementSdk.setConfig({ font_family: v }); }
+        },
+        fontSizeable: {
+          get: () => config.font_size || 16,
+          set: (v) => { config.font_size = v; window.elementSdk.setConfig({ font_size: v }); }
+        }
+      }),
+      mapToEditPanelValues: (config) => new Map([
+        ["hero_title", config.hero_title || defaultConfig.hero_title],
+        ["hero_subtitle", config.hero_subtitle || defaultConfig.hero_subtitle],
+        ["intro_text", config.intro_text || defaultConfig.intro_text]
+      ])
+    });
+
+    lucide.createIcons();
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9f99f8fd41e3c536',t:'MTc3ODQyNjg5NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
